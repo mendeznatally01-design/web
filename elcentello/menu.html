@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Centollo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+/* ENCABEZADO */
+header{
+    background:#fff;
+    text-align:center;
+    padding:15px;
+}
+
+header img{
+    width:100px;
+}
+
+header h1{
+    font-size:55px;
+    font-family:cursive;
+}
+
+/* MENÚ */
+nav{
+    background:#2252bb;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:15px 30px;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    background:#4bd3e6;
+}
+
+/* SECCIONES */
+section{
+    padding:30px;
+    background:rgb(223, 225, 230);
+    margin:20px;
+    border-radius:5px;
+}
+
+.inicio{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.inicio img{
+    width:350px;
+}
+
+.texto{
+    text-align:justify;
+}
+
+h2{
+    margin-bottom:15px;
+    color:#0a0707;
+}
+
+/* FORMULARIO */
+form{
+    max-width:500px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:black;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#08080a;
+}
+
+footer{
+    background:rgb(30, 30, 36);
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="img/elcangrejo.jpg">
+    <h1>El Centollo</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">inicio</a></li>
+        <li><a href="#menu.html">Menú</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+    </ul>
+</nav>
+
+<div class="presentacion">
+
+<style>
+
+.presentacion{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:20px;
+}
+
+.slider-info{
+    position:relative;
+    width:100%;
+    height:320px;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    opacity:0;
+    animation:mostrar 12s infinite;
+}
+
+.slide:nth-child(1){
+    animation-delay:0s;
+}
+
+.slide:nth-child(2){
+    animation-delay:4s;
+}
+
+.slide:nth-child(3){
+    animation-delay:8s;
+}
+
+.slide img{
+    width:350px;
+    height:250px;
+    object-fit:cover;
+}
+
+.texto{
+    max-width:500px;
+}
+
+.texto h2{
+    margin-bottom:15px;
+}
+
+@keyframes mostrar{
+
+    0%{
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    40%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+</style>
+
+<div class="slider-info">
+
+    <!-- Producto 1 -->
+    <div class="slide">
+
+        <img src="img/centollo.jpg">
+
+        <div class="texto">
+            <h2>Centollo</h2>
+
+            <p>
+                También conocido como Changurro o Txangurro.
+                Es un crustáceo marino muy apreciado por su sabor.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Peso:</strong> 500 gr - 4 kg
+            </p>
+
+            <p>
+                <strong>Dimensiones:</strong> 12 - 20 cm
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="slide">
+
+        <img src="img/langosta.jpg">
+
+        <div class="texto">
+            <h2>Langosta</h2>
+
+            <p>
+                Delicioso marisco de gran calidad,
+                preparado con ingredientes frescos.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Precio:</strong> $65.000
+            </p>
+
+            <p>
+                <strong>Ingredientes:</strong>
+                Langosta, mantequilla, ajo y limón.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="slide">
+
+        <img src="img/camaronesalajillo.jpg">
+
+        <div class="texto">
+            <h2>Camarones al Ajillo</h2>
+
+            <p>
+                Camarones seleccionados y preparados
+                con nuestra receta especial.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Precio:</strong> $40.000
+            </p>
+
+            <p>
+                <strong>Ingredientes:</strong>
+                Camarones, ajo, mantequilla y especias.
+            </p>
+        </div>
+
+    </div>
+    
+
+</div>
+
+</div>
+
+<section id="ubicacion">
+    <h2>Ubicación</h2>
+
+    <p>Pasto, Nariño - Colombia</p>
+
+    <iframe
+        src="https://maps.google.com/maps?q=Pasto&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;">
+    </iframe>
+
+</section>
+
+<footer>
+
+<style>
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.redes{
+    margin-top:15px;
+}
+
+.redes a{
+    display:inline-block;
+    margin:0 8px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    transform:scale(1.2);
+}
+
+.redes img{
+    width:35px;
+    height:35px;
+}
+
+</style>
+
+<p>Teléfono: 300 123 4567</p>
+
+<p>Correo: contacto@elcentollo.com</p>
+
+<div class="redes">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/573001234567" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://facebook.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+    <!-- Twitter / X -->
+    <a href="https://twitter.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter">
+    </a>
+
+</div>
+
+<br>
+
+<p>© 2026 Restaurante El Centollo</p>
+
+</footer>
+
+</body>
+</html>
